@@ -20,9 +20,11 @@ class Card extends Component {
             adjfour: '',
             nounthree: '',
             celefour: '',
-            adjfive: ''
+            adjfive: '',
+            contentVisible: false
         }
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
     
 handleInputChange(event) {
@@ -30,6 +32,10 @@ handleInputChange(event) {
     this.setState({[event.target.name]: event.target.value})
        
     }
+handleFormSubmit(event) {    
+    event.preventDefault()
+    this.setState({contentVisible: !this.state.contentVisible});
+}    
       render() {
       const inputData = [
           {label: 'Color', state: this.state.color, name: 'color'},
@@ -56,17 +62,21 @@ handleInputChange(event) {
 
       
         return (
-            <div className="card">
+            <form onSubmit={this.handleFormSubmit} className="card">
+              <div className="card__inputs">
+              
               
                   {inputData.map(data => Input((data), this.handleInputChange))}
-              <Content data={this.state}/>
               
+              </div>
+              <button type='submit'>{this.state.contentVisible ? 'Clear Form' : 'Generate Madlib'}</button>
+             { this.state.contentVisible ? <Content data={this.state}/> : ''}
               {/*
               { Input("color", this.state.color, this.handleInputChange, 'color')}
               {Input("Plural Noun", this.state.pluralNoun, this.handleInputChange, 'pluralNoun')}
               { Input("Adjective", this.state.adjone, this.handleInputChange, 'adjone')}
               {Input("Celebrity", this.state.celebone, this.handleInputChange, 'celebone')}*/}
-            </div>    
+            </form>    
         )
     }
 }
