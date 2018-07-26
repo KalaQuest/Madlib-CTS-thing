@@ -8,8 +8,11 @@
     //align-items: center;
 }
 .header {
-        align-self: center;
-    &__skew {
+    font-family: 'Montserrat';
+    color: white;
+    align-self: center;
+    text-align: center;
+      &__skew {
         -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
         clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
         z-index: -10;//this will put it into the background
@@ -34,6 +37,20 @@
         position: absolute;
         
         
+    }
+    font-family: 'Montserrat';
+      color: white;
+    h1 {
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 45px;
+    }
+    p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 19px;
+        width: 405px;
     }
 }
 .card {

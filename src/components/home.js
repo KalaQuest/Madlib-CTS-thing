@@ -5,7 +5,7 @@ import Card from './card';
   render() {
     return (
       <div className="home">
-        { Header('Bt-a-ga Madlibs', 'fill out the fields to complete the madlibs story') }
+        { Header('Bt-a-ga Madlibs', '--fill out the fields to complete the madlibs story--Then, push the button.') }
         <Card/>
       </div>
     );
