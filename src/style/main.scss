@@ -1,13 +1,40 @@
 
 .home {
+    
     background-color: rgba(214, 202, 202, .06);
     display: grid;
     grid-template-rows: [header-s] 218px [header-e card-s] minmax (736px, 994px) [card-e];
     justify-items: center;
-    align-items: center;
+    //align-items: center;
 }
 .header {
-   // align-self: center;
+        align-self: center;
+    &__skew {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        z-index: -10;//this will put it into the background
+        top: 0;
+        left: 0;
+        height: 110vh;
+        width: 100vw;
+        background-color: #444;
+        position: absolute;
+       
+        
+    }
+    &__border {
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 50%);
+        clip-path: polygon(0 48.5%, 100% 23%, 100% 25%, 0 50%);
+        z-index: -10;//this will put it into the background
+        top: 0;
+        left: 0;
+        height: 110vh;
+        width: 100vw;
+        background-color: rgb(105, 216, 110);;
+        position: absolute;
+        
+        
+    }
 }
 .card {
     min-height: 736px;
