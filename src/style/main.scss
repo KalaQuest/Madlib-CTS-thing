@@ -1,4 +1,14 @@
-
+@mixin button {
+    height: 50px;
+    width: 300px;
+    border-radius: 400px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    text-align: center;
+    justify-self: center;
+}
 .home {
     
     background-color: rgba(214, 202, 202, .06);
@@ -72,6 +82,28 @@
         align-items: center;
         grid-row-gap: 120px;
         margin: 65px 83px 0px 83px;
+    }
+   /* button {
+        height: 50px;
+        width: 300px;
+        border-radius: 400px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        color: white;
+        font-family: 'Montserrat';
+        font-size: 22px;
+        text-align: center;
+    }*/
+    button:focus {
+        outline: none;
+    }
+    &__generate {
+      background-color: aqua;
+      @include button;
+     
+    }
+    &__clear {
+      background-color: silver;
+      @include button;
     }
     
     
