@@ -11,4 +11,8 @@ import Card from './card';
     );
   }
 }
+//things we need to fix
+
+//labels in the content text
+//generate button space/card height
 export default Home;
