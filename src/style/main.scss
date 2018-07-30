@@ -8,7 +8,7 @@
     font-size: 22px;
     text-align: center;
     justify-self: center;
-    transform: translateY(50%);
+    //transform: translateY(50%);
 }
 .home {
     
@@ -29,8 +29,8 @@
         z-index: -10;//this will put it into the background
         top: 0;
         left: 0;
-        height: 110vh;
-        width: 100vw;
+        height: 1100px;
+        width: 1300px;
         background-color: silver;
         position: absolute;
        
@@ -42,8 +42,8 @@
         z-index: -10;//this will put it into the background
         top: 0;
         left: 0;
-        height: 110vh;
-        width: 100vw;
+        height: 1100px;
+        width: 1300px;
         background-color: aqua;
         position: absolute;
         
@@ -100,12 +100,13 @@
     }
     &__generate {
       background-color: aqua;
+      transform: translateY(-125px);
       @include button;
      
     }
     &__clear {
       background-color: silver;
-      
+      transform: translateY(50%);
       @include button;
     }
 

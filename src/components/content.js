@@ -5,6 +5,9 @@ class Content extends Component {
     this.count = 1;
 
   }
+  componentDidUpdate() {
+      this.count= 1;
+  }
     renderlabel(data) {
         return [
            <div className="card__content__label">{this.count++}</div>,
